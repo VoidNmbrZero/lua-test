@@ -9,3 +9,4 @@ force.MaxThrust = 100
 force.MaxSpeed = 100
 force.MaxTorque = 100
 force:Fire()
+force.ReachedTarget:Connect(function() force:Abort() end)
