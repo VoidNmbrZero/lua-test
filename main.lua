@@ -1,4 +1,6 @@
 local lp = game.Players.LocalPlayer
+local char = lp.Character
+local hum = char.Humanoid
 
 
-lp.Character.Head.CFrame = CFrame.new(0, 0, 0)
+hum.Health = 0
