@@ -1,12 +1,11 @@
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 local hum = char.Humanoid
-local force = Instance.new("RocketPropulsion") force.Parent = char.Torso
+local a0 = Instance.new("Attachment") a0.Parent = workspace.whiplash3r.Torso
+local a1 = Instance.new("Attachment") a1.Parent = char.Torso
+local force = Instance.new("LineForce") force.Parent = char.Torso
 
-force.Target = workspace.whiplash3r.Head
-force.CartoonFactor = 100
-force.MaxThrust = 100
-force.MaxSpeed = 100
-force.MaxTorque = 100
-force:Fire()
-force.ReachedTarget:Connect(function() force:Abort() end)
+
+force.Attachment0 = a0
+force.Attachment1 = a1
+force.Enabled = true
