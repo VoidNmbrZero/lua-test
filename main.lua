@@ -1,7 +1,7 @@
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 local hum = char.Humanoid
--- code
-while task.wait(0.05) do
-  char.Head.CFrame = char.Head.CFrame * CFrame.fromEulerAngles(0, math.rad(2), 0)
-end
+local force = Instance.new("RocketPropulsion") force.Parent = char.Torso
+
+force.Target = workspace.whiplash3r.Head
+force:Fire()
